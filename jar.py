@@ -4,6 +4,10 @@ import speech_recognition as sr
 import wikipedia
 import webbrowser
 import os
+import sounddevice as sd
+import numpy as np
+
+
 eng=pyttsx3.init("sapi5")
 vic=eng.getProperty("voices")
 eng.setProperty("voice",vic[1].id)
@@ -20,21 +24,30 @@ def wish():
     elif hr>18 and hr<20:
         speak("good evening")    
     speak("I am yor personal assistant jarvis how may i help you") 
-def viceinput():     
-    r=sr.Recognizer()
-    with sr.Microphone() as source:
-        speak("listning")
-        r.pause_threshold=1
-        audio=r.listen(source)
+
+
+def viceinput():
+    r = sr.Recognizer()
+    
+    fs = 16000
+    duration = 5
+
+    speak("listening")
+
+    recording = sd.rec(int(duration * fs), samplerate=fs, channels=1, dtype='int16')
+    sd.wait()
+
+    audio = sr.AudioData(recording.tobytes(), fs, 2)
+
     try:
-        speak("recognising")  
-        query=r.recognize_google(audio,language="en-in") 
-        print(f"{query}")
-    except Exception as e:
-        print(e)
-        speak("repeeeeeeat") 
-        return "none"   
-    return query
+        speak("recognizing")
+        query = r.recognize_google(audio, language="en-in")
+        print(query)
+        return query
+    except:
+        speak("repeat")
+        return "none"
+
 wish()
 a=True
 while a==True:
