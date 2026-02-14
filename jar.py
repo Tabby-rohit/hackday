@@ -57,9 +57,6 @@ while a==True:
     speak(f"according to wikipedia{wikipedia.summary(query,sentences=2)}")
  elif "open youtube" in query:
     webbrowser.open("youtube.com")  
- elif "open visual studio" in query:
-    path="C:\\Users\\dayan\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
-    os.startfile(path)
  elif "close" in query:
     a=False   
  elif "open google" in query:
@@ -77,3 +74,5 @@ while a==True:
     query=viceinput().lower()
     qry=query.replace(" ","+")
     webbrowser.open(f"https://www.google.com/search?q={qry}&sca_esv=1543b9c3e9f38e65&sxsrf=AE3TifOe4OM4kdlwS7Xx57A4qfUUDZmZkg%3A1748763731944&ei=UwQ8aMe1OKyq4-EPpNGKkQo&ved=0ahUKEwiHq6bI3M-NAxUs1TgGHaSoIqIQ4dUDCBA&oq={qry}&gs_lp=Egxnd3Mtd2l6LXNlcnAiDHl5eXl5IGFhYSBkeTIHECEYoAEYCjIHECEYoAEYCkjLN1CTBVijJHABeAGQAQCYAb0DoAGSEKoBCTAuMS40LjAuMrgBDMgBAPgBAZgCB6ACpQ_CAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICExAuGIAEGLADGEMYyAMYigXYAQHCAgUQIRifBcICCBAAGAoYDRgewgIGEAAYDRgewgIIEAAYCBgNGB7CAgsQABiABBiGAxiKBcICBRAAGO8FwgIGEAAYFhgewgIIEAAYFhgKGB7CAggQABiABBiiBJgDAIgGAZAGFLoGBggBEAEYCJIHCTEuMC4zLjEuMqAHmCayBwcyLTMuMS4yuAf7DsIHBzItMS41LjHIB20&sclient=gws-wiz-serp ")     
+ elif "open chat gpt" in query:
+    webbrowser.open("https://chat.openai.com/")  
