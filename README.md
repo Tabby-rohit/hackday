@@ -9,6 +9,7 @@
   <li>play music</li>
   <li>clears your doubt</li>
   <li>track your plans</li>
+  <li>System control</li>
   <li>ETC...</li>
 </ol>
 
