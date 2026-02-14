@@ -75,4 +75,34 @@ while a==True:
     qry=query.replace(" ","+")
     webbrowser.open(f"https://www.google.com/search?q={qry}&sca_esv=1543b9c3e9f38e65&sxsrf=AE3TifOe4OM4kdlwS7Xx57A4qfUUDZmZkg%3A1748763731944&ei=UwQ8aMe1OKyq4-EPpNGKkQo&ved=0ahUKEwiHq6bI3M-NAxUs1TgGHaSoIqIQ4dUDCBA&oq={qry}&gs_lp=Egxnd3Mtd2l6LXNlcnAiDHl5eXl5IGFhYSBkeTIHECEYoAEYCjIHECEYoAEYCkjLN1CTBVijJHABeAGQAQCYAb0DoAGSEKoBCTAuMS40LjAuMrgBDMgBAPgBAZgCB6ACpQ_CAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICExAuGIAEGLADGEMYyAMYigXYAQHCAgUQIRifBcICCBAAGAoYDRgewgIGEAAYDRgewgIIEAAYCBgNGB7CAgsQABiABBiGAxiKBcICBRAAGO8FwgIGEAAYFhgewgIIEAAYFhgKGB7CAggQABiABBiiBJgDAIgGAZAGFLoGBggBEAEYCJIHCTEuMC4zLjEuMqAHmCayBwcyLTMuMS4yuAf7DsIHBzItMS41LjHIB20&sclient=gws-wiz-serp ")     
  elif "open chat gpt" in query:
-    webbrowser.open("https://chat.openai.com/")  
+    webbrowser.open("https://chat.openai.com/")
+ elif "play music" in query:
+    webbrowser.open("https://music.youtube.com/") 
+ elif "open code" in query:
+    codepath="C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+    os.startfile(codepath)
+ elif "open command prompt" in query:
+    os.system("start cmd")
+ elif "open whatsapp" in query:
+    webbrowser.open("https://web.whatsapp.com/")       
+ elif "open instagram" in query:
+    webbrowser.open("https://www.instagram.com/")
+ elif "open gmail" in query:
+      webbrowser.open("https://mail.google.com/mail/u/0/#inbox")
+ elif "open drive" in query:     
+    webbrowser.open("https://drive.google.com/drive/my-drive")
+ elif "shut down pc" in query:
+    os.system("shutdown /s /t 5")
+    print("shutting down in 5 seconds")
+ elif "restart pc" in query:
+    os.system("shutdown /r /t 5")
+    print("restarting in 5 seconds")
+ elif "sleep pc" in query:
+    os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
+    print("sleeping in 5 seconds")
+ elif "hibernate pc" in query:
+    os.system("rundll32.exe powrprof.dll,SetSuspendState Hibernate")
+    print("hibernating in 5 seconds")
+ elif "open notepad" in query:
+    os.system("start notepad")
+       
